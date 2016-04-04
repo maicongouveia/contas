@@ -3,7 +3,13 @@
 include "config/conexaoBanco.php";
 
 //Query
-$sql = "SELECT * FROM contas_agenda ORDER BY id DESC";
+if(isset($_GET['id'])){
+	$sql = "SELECT * FROM contas_agenda WHERE id = '".$_GET['id']."'";
+}
+else{
+	$sql = "SELECT * FROM contas_agenda ORDER BY id DESC, nome ASC";
+}
+
 
 //Pega os dados da tabela
 $result = $conn->query($sql);

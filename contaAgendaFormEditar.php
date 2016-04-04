@@ -38,7 +38,7 @@ session_start();
 							<h3 id='titulo'>Conta - Agenda </h3>
 						</div>
 
-						<form action='contaAgendaCadastrar.php' method='post'>	
+						<form action='contaAgendaEditar.php' method='post'>	
 						
 						<div class='row' style='margin-top: 10px;'> 
 							<div class='col-md-3 col-md-offset-2'>
@@ -47,7 +47,7 @@ session_start();
 								</font>
 							</div>
 							<div class='col-md-5'>
-								<input class='form-control input-md' type='text' name='nome' maxlength='25' value='<?php echo $contasAgenda[0]['nome'] ?>'disabled>
+								<input class='form-control input-md' type='text' name='nome' maxlength='25' value='<?php echo $contasAgenda[0]['nome'] ?>'required>
 							</div>
 						</div>
 						<div class='row'style='margin-top: 10px;' > 
@@ -57,7 +57,7 @@ session_start();
 								</font>
 							</div>
 							<div class='col-md-5'>
-								<input class='form-control input-md' type='text' name='descricao'  value='<?php echo $contasAgenda[0]['descricao'] ?>'disabled>
+								<input class='form-control input-md' type='text' name='descricao'  value='<?php echo $contasAgenda[0]['descricao'] ?>'required>
 							</div>
 						</div>
 						<div class='row'style='margin-top: 10px;' > 
@@ -67,17 +67,16 @@ session_start();
 								</font>
 							</div>
 							<div class='col-md-2'>
-								<input class='form-control input-md col-md-1' type='number' name='dia' min='1' max='31' maxlength='2' width='2'  value='<?php echo $contasAgenda[0]['dia'] ?>'disabled>
+								<input class='form-control input-md col-md-1' type='number' name='dia' min='1' max='31' maxlength='2' width='2'  value='<?php echo $contasAgenda[0]['dia'] ?>'required>
 							</div>
 						</div>
 						<div class='row'>							
-							<div class='col-md-3 col-md-offset-2'>
-								<a href='contaAgendaFormEditar.php?id=<?php echo $_GET['id']; ?>' class='btn btn-warning form-control'>Editar<a/>
-							</div>
-							<div class='col-md-3 col-md-offset-2'>
-								<a href='#' class='btn btn-warning form-control'>Excluir<a/>
+							<div class='col-md-8 col-md-offset-2'>
+								<button class="btn btn-warning form-control" type="submit" style='margin-top: 10px;'>Editar</button>
 							</div>
 						</div>	
+
+							<input type='hidden' name='id' value='<?php echo $_GET['id']; ?>' >
 
 						</form>
 				</div>
