@@ -6,7 +6,7 @@ session_start();
 <html lang="pt">
 
 <head>
-	<title>Administração - Cadastro de Conta</title>
+	<title>Administração - Conta - Agenda</title>
 
     <!-- Importando BootStrap -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
@@ -17,9 +17,6 @@ session_start();
 
     <!-- CUSTOM STYLES-->
 	<link href="assets/css/custom.css" rel="stylesheet" />
-
-	<!-- CSS PROPRIO-->
-	<link href="assets/css/estilo.css" rel="stylesheet" />
 
 	<!--Caracteres Estranhos-->
 	<meta charset="utf-8">
@@ -75,7 +72,7 @@ session_start();
 								<a href='contaAgendaFormEditar.php?id=<?php echo $_GET['id']; ?>' class='btn btn-warning form-control'>Editar<a/>
 							</div>
 							<div class='col-md-3 col-md-offset-2'>
-								<a href='#' class='btn btn-warning form-control'>Excluir<a/>
+								<a href='#' class='btn btn-warning form-control' onclick='confirmarExclusao()'>Excluir<a/>
 							</div>
 						</div>	
 
@@ -84,6 +81,19 @@ session_start();
 			</div>
 			</div>
 	</div>
+
+	<script>
+
+		function confirmarExclusao(){
+
+			var excluir = confirm("Deseja excluir esse processo ?");
+
+			if(excluir == true){
+				location.href = "contaAgendaExcluir.php?id=<?php echo $_GET['id']; ?>";
+			}
+		}
+
+	</script>
 
  	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 	<!-- JQUERY SCRIPTS -->
