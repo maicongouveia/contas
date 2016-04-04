@@ -104,7 +104,7 @@ session_start();
 
 								echo "<tr>"
 									."<td>"
-									."<a href='contaAgenda.php?id=".$contasAgenda[$i]['id']."'>"
+									."<a href='contaAgenda.php?id=".$contasAgendaDataAnteriores[$i]['id']."'>"
 									.$contasAgendaDataAnteriores[$i]['nome']
 									."</a>"
 									."</td>"
@@ -116,8 +116,8 @@ session_start();
 									."</td>"
 									."</tr>";
 								}
-								echo "</div>";
 								echo "</table>";
+								echo "</div>";
 							}
 
 						else{
@@ -162,8 +162,9 @@ session_start();
 									."</td>"
 									."</tr>";
 								}
-								echo "</div>";
+								
 								echo "</table>";
+								echo "</div>";
 							}
 
 						else{
@@ -208,8 +209,9 @@ session_start();
 									."</td>"
 									."</tr>";
 								}
-								echo "</div>";
+								
 								echo "</table>";
+								echo "</div>";
 							}
 
 						else{
@@ -218,7 +220,7 @@ session_start();
 
 						?>
 					</div>
-
+				</div>
 				</div>
 			</div>
 

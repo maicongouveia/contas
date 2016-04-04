@@ -102,7 +102,7 @@ session_start();
 										.$usuario[$i]['email']
 										."</td>"
 										."<td>"
-										."<a href='redefinirSenhaUsuario.php?nomeUsuario=".$usuario[$i]['nome']."&emailUsuario=".$usuario[$i]['email']."&idUsuario=".$usuario[$i]['id']." ' class='btn btn-warning center-block'>"
+										."<a href='usuarioRedefinirSenha.php?nomeUsuario=".$usuario[$i]['nome']."&emailUsuario=".$usuario[$i]['email']."&idUsuario=".$usuario[$i]['id']." ' class='btn btn-warning center-block'>"
 										."<span class='glyphicon glyphicon-refresh' aria-hidden='true'></span>"
 										." Redifinir Senha"
 										."</a>"

@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="pt" class="no-js">
 <head>
-  <title>Login - Gomes GB</title>
+  <title>Login - Administração - Iguatemi Imóveis</title>
 
     <!-- Importando BootStrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
