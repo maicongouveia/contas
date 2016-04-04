@@ -2,7 +2,7 @@
 // 1 - Local
 // 2 - NeepHost
 // 3 - LocalWEB
-$conexao = 1;
+$conexao = 3;
 if($conexao == 1){
 $servername = "localhost";
 $username = "root";
@@ -16,10 +16,10 @@ $password = "AgendaProcessos2016";
 $dbname = "maicongo_agendaprocessos";
 }
 else if($conexao == 3){
-$servername = "mysql01.gomesgb2.hospedagemdesites.ws";
-$username = "gomesgb2";
-$password = "gomesGB2016";
-$dbname = "gomesgb2";
+$servername = "controlecontas.mysql.dbaas.com.br";
+$username = "controlecontas";
+$password = "predio5037";
+$dbname = "controlecontas";
 }
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
