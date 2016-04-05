@@ -14,7 +14,7 @@ $diaAtual = date("d");
 include "config/conexaoBanco.php";
 
 //Query
-$sql = "SELECT * FROM contas_agenda WHERE dia < '$diaAtual'";
+$sql = "SELECT * FROM contas_agenda WHERE dia < '$diaAtual' ORDER BY dia";
 
 //Pega os dados da tabela
 $result = $conn->query($sql);
@@ -35,7 +35,7 @@ else{
 
 //Faz pesquisa de Consulta de Contas da Data 
 //Query
-$sql = "SELECT * FROM contas_agenda WHERE dia = '$diaAtual'";
+$sql = "SELECT * FROM contas_agenda WHERE dia = '$diaAtual' ORDER BY dia";
 
 //Pega os dados da tabela
 $result = $conn->query($sql);
@@ -56,7 +56,7 @@ else{
 
 //Faz pesquisa de Consulta de Contas da Data Futuras 
 //Query
-$sql = "SELECT * FROM contas_agenda WHERE dia > '$diaAtual'";
+$sql = "SELECT * FROM contas_agenda WHERE dia > '$diaAtual' ORDER BY dia";
 
 //Pega os dados da tabela
 $result = $conn->query($sql);
