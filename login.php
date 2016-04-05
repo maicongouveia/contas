@@ -39,7 +39,7 @@ session_start();
                         <div id="wrapper">
                             <div id="login" class="animate form">
                                 <form action='index.php' method="POST"> 
-                                    <h1>Login - Gomes GB</h1> 
+                                    <h1>Administração - Iguatemi Imóveis</h1> 
                                     <p> 
                                         <label for="username" class="uname" data-icon="u" > Email </label>
                                         <input type="email" id="email" name='email' required="required" placeholder="Email@mail.com"/>
