@@ -150,7 +150,7 @@ session_start();
 
 								echo "<tr>"
 									."<td>"
-									."<a href='contaAgenda.php?id=".$contasAgenda[$i]['id']."'>"
+									."<a href='contaAgenda.php?id=".$contasAgendaDataAtual[$i]['id']."'>"
 									.$contasAgendaDataAtual[$i]['nome']
 									."</a>"
 									."</td>"
