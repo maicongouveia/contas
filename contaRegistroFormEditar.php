@@ -96,6 +96,8 @@ session_start();
 							</div>
 						</div>	
 
+						<input type='hidden' name='id' value='<?php echo $_GET['id']; ?>' >
+						
 						</form>
 				</div>
 			</div>

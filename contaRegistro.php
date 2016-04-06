@@ -92,7 +92,7 @@ session_start();
 						</div>
 						<div class='row' style="margin-top: 10px;">							
 							<div class='col-md-3 col-md-offset-2'>
-								<a href='contaAgendaFormEditar.php?id=<?php echo $_GET['id']; ?>' class='btn btn-warning form-control'>Editar<a/>
+								<a href='contaRegistroFormEditar.php?id=<?php echo $_GET['id']; ?>' class='btn btn-warning form-control'>Editar<a/>
 							</div>
 							<div class='col-md-3 col-md-offset-2'>
 								<a href='#' class='btn btn-warning form-control' onclick='confirmarExclusao()'>Excluir<a/>
@@ -109,7 +109,7 @@ session_start();
 
 		function confirmarExclusao(){
 
-			var excluir = confirm("Deseja excluir esse processo ?");
+			var excluir = confirm("Deseja excluir essa conta?");
 
 			if(excluir == true){
 				location.href = "contaRegistroExcluir.php?id=<?php echo $_GET['id']; ?>";
