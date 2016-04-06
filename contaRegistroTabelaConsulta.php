@@ -36,14 +36,22 @@ session_start();
 
 					<div class='row'>
 						<div class='col-md-4'>
-							Nome: <input type='text' class='input-sm' maxlength='25' name='nome' id='nome'>
+							Nome: <input type='text' class='input-sm' name='nome'>
 						</div>
 						<div class='col-md-4'>
 							Descrição: <input type='text' class='input-sm' name='descricao' >
 						</div>
-						<div class='col-md-2'>
-							Valor: <input class='form-control input-md col-md-1' type='decimal' name='data' required >
+						<div class='col-md-4'>
+							Valor: <input class='input-sm' type='decimal' name='valor'>
 						</div>				
+					</div>
+					<div class='row' style='margin-top: 10px;'>
+						<div class='col-md-6'>
+							Data de Pagamento: <input type='date' class='input-sm' name='dataPagamento'>
+						</div>
+						<div class='col-md-6'>
+							Data de Vencimento: <input type='date' class='input-sm' name='dataVencimento'>
+						</div>			
 					</div>
 
 				<br>

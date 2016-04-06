@@ -29,20 +29,20 @@ session_start();
 
  	<div id="page-wrapper" style='height:auto; overflow:hidden;'>
 		<div id="page-inner"style='height:auto; overflow:hidden;'>
-			<form action="contaAgendaTabelaConsultar.php" method='POST'>
+			<form action="contaAgendaTabelaConsulta.php" method='POST'>
 			<div class='panel panel-warning'>
 				<div class='panel-heading'>Pesquisar</div>
 				<div class='panel-body'>
 
 					<div class='row'>
 						<div class='col-md-4'>
-							Nome: <input type='text' class='input-sm' maxlength='25' name='nome' id='nome'>
+							Nome: <input type='text' class='input-sm' name='nome'>
 						</div>
 						<div class='col-md-4'>
 							Descrição: <input type='text' class='input-sm' name='descricao' >
 						</div>
-						<div class='col-md-2'>
-							Dia: <input class='form-control input-md col-md-1' type='number' name='dia' min='1' max='31' maxlength='2' width='2' required >
+						<div class='col-md-4'>
+							Dia: <input class='input-sm' type='number' name='dia' min='1' max='31' maxlength='2' width='2'>
 						</div>				
 					</div>
 
