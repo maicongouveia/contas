@@ -90,9 +90,12 @@ session_start();
 								<input class='form-control input-md col-md-1' type='date' name='dataPagamento' value='<?php echo $contasRegistro[0]['dataPagamento']; ?>' disabled >
 							</div>
 						</div>
-						<div class='row'>							
-							<div class='col-md-8 col-md-offset-2'>
-								<input class='btn btn-warning form-control' style='margin-top: 10px;' type='submit' value='Editar' />
+						<div class='row' style="margin-top: 10px;">							
+							<div class='col-md-3 col-md-offset-2'>
+								<a href='contaAgendaFormEditar.php?id=<?php echo $_GET['id']; ?>' class='btn btn-warning form-control'>Editar<a/>
+							</div>
+							<div class='col-md-3 col-md-offset-2'>
+								<a href='#' class='btn btn-warning form-control' onclick='confirmarExclusao()'>Excluir<a/>
 							</div>
 						</div>	
 
@@ -101,6 +104,19 @@ session_start();
 			</div>
 			</div>
 	</div>
+
+	<script>
+
+		function confirmarExclusao(){
+
+			var excluir = confirm("Deseja excluir esse processo ?");
+
+			if(excluir == true){
+				location.href = "contaRegistroExcluir.php?id=<?php echo $_GET['id']; ?>";
+			}
+		}
+
+	</script>
 
  	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 	<!-- JQUERY SCRIPTS -->
