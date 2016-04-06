@@ -26,8 +26,8 @@ session_start();
 	<?php include "assets/interface/menu.php"; ?>
 	<?php include "agenda.php"; ?>
 
-	<div id="page-wrapper">
-		<div id="page-inner">
+	<div id="page-wrapper" style='height:auto; overflow:hidden;'>
+		<div id="page-inner"style='height:auto; overflow:hidden;'>
 
 			<h4> Agenda </h4>
 
