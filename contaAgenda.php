@@ -86,7 +86,7 @@ session_start();
 
 		function confirmarExclusao(){
 
-			var excluir = confirm("Deseja excluir esse processo ?");
+			var excluir = confirm("Deseja excluir essa conta?");
 
 			if(excluir == true){
 				location.href = "contaAgendaExcluir.php?id=<?php echo $_GET['id']; ?>";

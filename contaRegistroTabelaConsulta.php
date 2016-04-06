@@ -104,7 +104,7 @@ session_start();
 								echo "</table>";
 
 				}else{
-					echo "<div class='alert alert-warning col-md-6 col-md-offset-3 text-center'> Não existem contas cadastradas na Agenda</div>";
+					echo "<div class='alert alert-warning col-md-6 col-md-offset-3 text-center'> Não existem contas cadastradas no registro </div>";
 				}
 
 
