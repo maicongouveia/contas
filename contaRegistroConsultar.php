@@ -16,8 +16,8 @@ else if(!empty($_POST)){
 	if($_POST['descricao'] != ""){
 		$sql .= " WHERE descricao LIKE '%".$_POST['descricao']."%'";
 	}
-	if($_POST['dia'] != ""){
-		$sql .= " WHERE dia = '".$_POST['dia']."'";
+	if($_POST['valor'] != ""){
+		$sql .= " WHERE valor LIKE '%".$_POST['valor']."%'";
 	}
 	if($_POST['dataPagamento'] != ""){
 		$sql .= " WHERE dataPagamento = '".$_POST['dataPagamento']."'";

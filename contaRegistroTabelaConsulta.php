@@ -29,7 +29,7 @@ session_start();
 
  	<div id="page-wrapper" style='height:auto; overflow:hidden;'>
 		<div id="page-inner"style='height:auto; overflow:hidden;'>
-			<form action="contaRegistroTabelaConsultar.php" method='POST'>
+			<form action="contaRegistroTabelaConsulta.php" method='POST'>
 			<div class='panel panel-warning'>
 				<div class='panel-heading'>Pesquisar</div>
 				<div class='panel-body'>
@@ -78,10 +78,10 @@ session_start();
 									."<td>"
 									."Valor"
 									."</td>"
-									."<td>"
+									."<td style='text-align:center;'>"
 									."Data de Pagamento"
 									."</td>"
-									."<td>"
+									."<td style='text-align:center;'>"
 									."Data de Vencimento"
 									."</td>"
 									."</tr>"
@@ -97,15 +97,17 @@ session_start();
 									."<td>"
 									.$contasRegistro[$i]['descricao']
 									."</td>"
-									."<td>"
+									."<td>R$ "
 									.$contasRegistro[$i]['valor']
 									."</td>"
-									."<td>"
-									.$contasRegistro[$i]['dataPagamento']
-									."</td>"
-									."<td>"
-									.$contasRegistro[$i]['dataVencimento']
-									."</td>"
+									."<td style='text-align:center;'>";
+									$dataPagamento = explode("-",$contasRegistro[$i]['dataPagamento']);
+									echo $dataPagamento[2]."-".$dataPagamento[1]."-".$dataPagamento[0];
+									echo"</td>"
+									."<td style='text-align:center;'>";
+									$dataVencimento = explode("-",$contasRegistro[$i]['dataVencimento']);
+									echo $dataVencimento[2]."-".$dataVencimento[1]."-".$dataVencimento[0];
+									echo"</td>"
 									."</tr>";
 								}
 								echo "</div>";
