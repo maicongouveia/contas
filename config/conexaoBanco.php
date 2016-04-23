@@ -7,7 +7,7 @@ if($conexao == 1){
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "controledecontas";
+$dbname = "controlecontas";
 }
 else if($conexao == 2){
 $servername = "maicongouveia.com.br";

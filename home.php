@@ -130,6 +130,7 @@ session_start();
 					<div role="tabpanel" class="tab-pane active" id="hoje">
 
 						<?php
+
 						if($contasAgendaDataAtual != false){
 						echo "<div class='col-md-12'>"
 									."<table class='table table-striped table-condensed table-hover'>"
@@ -146,9 +147,18 @@ session_start();
 									."</td>"
 									."</tr>"
 									."</thead>";
+
 							for($i = 0; $i < count($contasAgendaDataAtual); $i++){
 
-								echo "<tr>"
+								echo "<tr ";
+								if($segunda){
+									if($contasAgendaDataAtual[$i]['dia'] == $domingo || $contasAgendaDataAtual[$i]['dia'] == $sabado){
+										echo "style='background-color: rgba(217, 83, 79, 0.3);'";
+									}
+								}
+								
+
+								echo ">"
 									."<td>"
 									."<a href='contaAgenda.php?id=".$contasAgendaDataAtual[$i]['id']."'>"
 									.$contasAgendaDataAtual[$i]['nome']
@@ -158,12 +168,31 @@ session_start();
 									.$contasAgendaDataAtual[$i]['descricao']
 									."</td>"
 									."<td>"
-									.$contasAgendaDataAtual[$i]['dia']
-									."</td>"
+									.$contasAgendaDataAtual[$i]['dia'];
+								if($segunda){
+									if($contasAgendaDataAtual[$i]['dia'] == $domingo){
+										echo " - Domingo";
+									}
+									else if($contasAgendaDataAtual[$i]['dia'] == $sabado){
+										echo " - Sábado";
+									}
+								}
+
+								echo "</td>"
 									."</tr>";
 								}
 								
 								echo "</table>";
+
+								if(date("N")==7 && count($contasAgendaDataAtual) != 0){
+									echo "<div class='alert alert-danger text-center col-md-4 col-md-offset-4'>Hoje é Domingo <br> <b> As contas serão realocadas para Segunda</b></div>";
+								}
+								else if(date("N")==6 && count($contasAgendaDataAtual) != 0){
+									echo "<div class='alert alert-danger text-center col-md-4 col-md-offset-4'>Hoje é Sábado <br> <b> As contas serão realocadas para Segunda</b></div>";
+								}
+
+
+
 								echo "</div>";
 							}
 
