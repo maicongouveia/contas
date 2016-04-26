@@ -131,13 +131,6 @@ session_start();
 				</div>
 			</div>
 	</div>
-
-	<script type="text/javascript">
-		var email = "<?php echo "$email" ?>";
-		alert("Acesse o email " + email +" para redefinir a senha.");
-		location.href = "usuarioTabelaConsulta.php";
-	</script>
-
  	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 	<!-- JQUERY SCRIPTS -->
 	<script src="assets/js/jquery-1.10.2.js"></script>
