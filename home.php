@@ -29,7 +29,7 @@ session_start();
 	<div id="page-wrapper" style='height:auto; overflow:hidden;'>
 		<div id="page-inner"style='height:auto; overflow:hidden;'>
 
-			<h4> Agenda </h4>
+			<h4> Agenda <?php echo date("d/m/Y"); ?></h4>
 
 			<div>
 

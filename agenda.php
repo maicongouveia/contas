@@ -15,14 +15,11 @@ if(date("N")==1){
 //Dia Atual
 $diaAtual = date("d");
 
-
-
 //Conexão com o banco
 include "config/conexaoBanco.php";
 
 //Cria array com todos os dados recebidos do banco
 $contasAgendaDataAtual = array();
-
 
 //Faz pesquisa de Consulta de Contas da Data Futuras 
 //Query
@@ -35,22 +32,9 @@ if($result->num_rows > 0){
 	//Cria array com todos os dados recebidos do banco
 	$contasAgendaDataFuturas = array();
 
-	//Inclui dados no array
-	if($segunda){
-		while($row = $result->fetch_assoc()) {
-			if($row['dia'] == $domingo || $row['dia'] == $sabado){
-				array_push($contasAgendaDataAtual, $row);
-			}else{
-				array_push($contasAgendaDataFuturas, $row);
-			}
-			
-		}
-	}
-	else{
 		while($row = $result->fetch_assoc()) {
 			array_push($contasAgendaDataFuturas, $row);
 		}
-	}
 
 }
 else{
@@ -75,8 +59,7 @@ if($result->num_rows > 0){
 				array_push($contasAgendaDataAtual, $row);
 			}else{
 				array_push($contasAgendaDataAnteriores, $row);
-			}
-			
+			}			
 		}
 	}
 	else{
@@ -106,9 +89,8 @@ if($result->num_rows > 0){
 
 }
 else{
-	$contasAgendaDataAtual = false;
+	if(!isset($contasAgendaDataAtual)){
+		$contasAgendaDataAtual = false;
+	}
 }
-
-
-
 ?>
